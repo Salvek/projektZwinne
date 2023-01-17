@@ -7,19 +7,52 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 <body>
-<div class="page-header">
-  <h1><a href="/"> Blog dla programistów </a></h1>
-</div>
-<div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% block content %}
+<div id="container">
+    <div class="page-header">
+        <h1><a href="/">BLOG DLA PROGRAMISTÓW</a></h1>
+    </div>
+    <div id="menu">
+            <div class="option">Strona główna</div>
+            <div class="option">Zaloguj się</div>
+            <div class="option">Zarejestruj się</div>
+            <div class="option">Utwórz post</div>
+            <div class="option">O projekcie</div>
+            <div style="clear:both;"></div>
+        </div>
+    <div id="topbar">
+            <div id="topbarL">
+                <img src="{% static 'agile-logo.png' %}" width="120" height="105" />
+            </div>
+            <div id="topbarR">
+                <span class="bigtitle">O projekcie słów kilka</span>
+                <div style="height: 15px;"></div>
+                Jest to projekt zaliczeniowy przedmiotu <b>"Programowanie z wykorzystaniem metodyk zwinnych"</b>. Skład zespołu scrum:
+                Sławomir Śpiewak - Product Owner,
+                Zofia Tyczka - Scrum Master,
+                Kamil Safaryjski - DEV,
+                Patryk Pietryga - DEV.
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    <div id="sidebar">
+            <div class="optionL">Strona główna</div>
+            <div class="optionL">Zaloguj się</div>
+            <div class="optionL">Zarejestruj się</div>
+            <div class="optionL">Utwórz post</div>
+            <div class="optionL">O projekcie</div>
+        </div>
+    <div class="content">
+        <div class="row"->
+            <div class="col-md-8">
+                {% block content %}
 
-            {% endblock %}
+                {% endblock %}
+            </div>
         </div>
     </div>
-
+    <div id="footer">
+        Projekt na zwinne &copy; Wszelkie prawa zastrzeżone
+    </div>
 </div>
-
 </body>
 </html>
